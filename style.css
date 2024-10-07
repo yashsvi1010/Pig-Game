@@ -5,8 +5,179 @@
 }
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
+}
+header {
+  padding: 5px;
+  margin: 1% 0;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 body {
+  font-family: "Teko", sans-serif;
+  font-weight: 500;
+  /* height: 100vh; */
+  color: #333;
+  background-image: linear-gradient(to top left, #ce67e3 0%, #4e3ac1 100%);
+}
+main {
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.player {
+  flex: 40%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+.dice {
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+.name {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  /* margin-bottom: 1rem; */
+}
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+.player--active {
+  border-radius: 9px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  display: flex;
+  background-color: #4736c7;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+  flex-direction: column;
+  align-items: center;
+}
+.current-label {
+  align-items: center;
+  text-transform: uppercase;
+  /* margin-bottom: 1rem; */
+  font-size: 2rem;
+  color: #ddd;
+}
+.current-score {
+  font-size: 3.5rem;
+}
+.btn {
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 1.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.game--btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+.btn--dice {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  main {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dice {
+    height: 6rem;
+  }
+  .player {
+    padding: 1rem;
+    width: 25rem;
+  }
+  .name {
+    font-size: 3rem;
+  }
+  .score {
+    font-size: 3rem;
+  }
+
+  .current-score {
+    font-size: 2.5rem;
+  }
+  .game--btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+  }
+  .btn--dice {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* main-style below */
+/* body {
   font-family: "Teko", sans-serif;
   font-weight: 500;
   height: 100vh;
@@ -23,7 +194,7 @@ body {
   align-items: center;
 }
 /* rules button  */
-.button-rule {
+/* .button-rule {
   align-items: center;
   appearance: none;
   background-color: #fcfcfd;
@@ -81,7 +252,8 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
-
+  width: 80%;
+  margin-left: 10%;
   justify-content: center;
 }
 .player {
@@ -208,3 +380,5 @@ main {
 .hidden {
   display: none;
 }
+
+  */
